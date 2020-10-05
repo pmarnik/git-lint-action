@@ -3,10 +3,9 @@
 echo "Hello $1"
 echo "XXX"
 
-find /github/
+
 cat /github/workspace/README.md
-echo $GITHUB_WORKSPACE
-ls $GITHUB_WORKSPACE
+echo $WHO_TO_GREET
 
 time=$(date)
 echo "::set-output name=time::$time"
