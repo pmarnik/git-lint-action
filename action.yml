@@ -14,5 +14,5 @@ runs:
   args:
     - ${{ inputs.who-to-greet }}
   env:
-    LINTER_WORKSPACE: $GITHUB_WORKSPACE  
+    LINTER_WORKSPACE: GITHUB_WORKSPACE  
     LINTER_WORKSPACE_CONFIG_FILE: ${{ inputs.git-lint-config-file }}
