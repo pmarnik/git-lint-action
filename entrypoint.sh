@@ -1,14 +1,6 @@
 #!/bin/bash
-echo Your container args are: "$@"
-
-env
-
 
 LINTER_WORKSPACE=$PWD
-
-echo $CONFIG_FILE_LOCATION
-
-#CONFIG_FILE_LOCATION=/default/config
 
 if ! [ -z "$LINTER_CONFIG_FILE" ]; then
   CONFIG_FILE_LOCATION=$LINTER_CONFIG_FILE
@@ -29,19 +21,11 @@ if ! [ -e "$CONFIG_FILE_LOCATION" ]; then
   exit 1
 fi
 
-#git-lint -a
 
-echo "LINTER_WORKSPACE=$LINTER_WORKSPACE"
-echo "LINTER_CONFIG_FILE=$LINTER_CONFIG_FILE"
-echo "LINTER_WORKSPACE_CONFIG_FILE=$LINTER_WORKSPACE_CONFIG_FILE"
-#mkdir -p 
-
-#/config/git-lint/configuration.yml
 
 export XDG_CONFIG_DIRS=/config
 
 cp "$CONFIG_FILE_LOCATION" "/config/git-lint/configuration.yml"
-#COPY config.yml /config/git-lint/configuration.yml
 
 echo CONFIG_FILE_LOCATION=$CONFIG_FILE_LOCATION
 git-lint -c -i
