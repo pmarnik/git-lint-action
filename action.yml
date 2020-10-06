@@ -1,10 +1,10 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  git-lint-config-file:  # id of input
+    description: 'Path to git-lint config file'
     required: true
-    default: 'World'
+    default: 'git-lint.yml'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
@@ -14,4 +14,5 @@ runs:
   args:
     - ${{ inputs.who-to-greet }}
   env:
-    WHO_TO_GREET: ${{inputs.who-to-greet}}  
+    LINTER_WORKSPACE: $GITHUB_WORKSPACE  
+    LINTER_WORKSPACE_CONFIG_FILE: ${{ inputs.git-lint-config-file }}
