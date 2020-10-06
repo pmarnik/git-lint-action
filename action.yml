@@ -1,5 +1,5 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Git Lint'
+description: 'Git commit message linter'
 inputs:
   git-lint-config-file:  # id of input
     description: 'Path to git-lint config file'
@@ -11,8 +11,5 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.who-to-greet }}
   env:
-    LINTER_WORKSPACE: GITHUB_WORKSPACE  
     LINTER_WORKSPACE_CONFIG_FILE: ${{ inputs.git-lint-config-file }}

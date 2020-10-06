@@ -3,12 +3,9 @@ echo Your container args are: "$@"
 
 env
 
-if ! [ -d "$LINTER_WORKSPACE" ]; then
-  echo "Could not find LINTER_WORKSPACE=$LINTER_WORKSPACE directory" >&2
-  exit 1
-fi
 
-cd "$LINTER_WORKSPACE"
+LINTER_WORKSPACE=$PWD
+
 echo $CONFIG_FILE_LOCATION
 
 #CONFIG_FILE_LOCATION=/default/config
