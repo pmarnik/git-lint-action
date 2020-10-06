@@ -28,6 +28,11 @@ export XDG_CONFIG_DIRS=/config
 cp "$CONFIG_FILE_LOCATION" "/config/git-lint/configuration.yml"
 
 echo CONFIG_FILE_LOCATION=$CONFIG_FILE_LOCATION
-git-lint -c -i
+
+env
+pwd
+ls 
+
+#git-lint -c -i
 
 git-lint -a
