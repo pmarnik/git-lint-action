@@ -35,4 +35,12 @@ ls
 
 #git-lint -c -i
 
+
+
+git branch 
+
+git log master..HEAD
+
+git log master..test3
+
 git-lint -a
