@@ -1,6 +1,8 @@
 #!/bin/bash
 echo Your container args are: "$@"
 
+env
+
 if ! [ -d "$LINTER_WORKSPACE" ]; then
   echo "Could not find LINTER_WORKSPACE=$LINTER_WORKSPACE directory" >&2
   exit 1
