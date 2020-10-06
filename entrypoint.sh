@@ -45,4 +45,6 @@ git log master..test3
 
 git log origin/master..HEAD
 
+export CIRCLECI=YES
+
 git-lint -a
