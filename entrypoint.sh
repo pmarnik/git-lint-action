@@ -43,4 +43,6 @@ git log master..HEAD
 
 git log master..test3
 
+git log origin/master..HEAD
+
 git-lint -a
