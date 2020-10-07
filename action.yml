@@ -2,11 +2,8 @@ name: 'Git Lint'
 description: 'Git commit message linter'
 inputs:
   git-lint-config-file:  # id of input
-    description: 'Path to git-lint config file'
+    description: 'Path to git-lint.yml config file'
     required: false
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'docker'
   image: 'Dockerfile'

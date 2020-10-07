@@ -24,6 +24,11 @@ cp "$CONFIG_FILE_LOCATION" "/config/git-lint/configuration.yml"
 
 echo CONFIG_FILE_LOCATION=$CONFIG_FILE_LOCATION
 
+if $(git rev-parse --is-shallow-repository); then
+  echo "Need whole repo clone" >&2
+  exit 1
+fi
+
 export XDG_CONFIG_DIRS=/config
 export CIRCLECI=true
 
