@@ -3,8 +3,7 @@ description: 'Git commit message linter'
 inputs:
   git-lint-config-file:  # id of input
     description: 'Path to git-lint config file'
-    required: true
-    default: 'git-lint.yml'
+    required: false
 outputs:
   time: # id of output
     description: 'The time we greeted you'

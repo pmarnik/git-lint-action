@@ -1,7 +1,5 @@
 #!/bin/bash
 
-LINTER_WORKSPACE=$PWD
-
 if ! [ -z "$LINTER_CONFIG_FILE" ]; then
   CONFIG_FILE_LOCATION=$LINTER_CONFIG_FILE
 fi
@@ -22,29 +20,11 @@ if ! [ -e "$CONFIG_FILE_LOCATION" ]; then
 fi
 
 
-
-export XDG_CONFIG_DIRS=/config
-
 cp "$CONFIG_FILE_LOCATION" "/config/git-lint/configuration.yml"
 
 echo CONFIG_FILE_LOCATION=$CONFIG_FILE_LOCATION
 
-env
-pwd
-ls 
-
-#git-lint -c -i
-
-
-
-git branch 
-
-git log master..HEAD
-
-git log master..test3
-
-git log origin/master..HEAD
-
+export XDG_CONFIG_DIRS=/config
 export CIRCLECI=true
 
 git-lint -a
